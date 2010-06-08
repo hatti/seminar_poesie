@@ -3,13 +3,14 @@
 
 var resetObjects;
 resetObjects = GameObject.FindGameObjectsWithTag("reset");
-var map = {};
+var positions = {};
+var rotations = {};
 
 // for all gameobjects with tag 'reset'
 for (var current in resetObjects){
 	// Debug.Log(current.name);	
-	map[current.name] = current.transform.position;
-	Debug.Log(current.name);
+	positions[current.name] = current.transform.position;
+	rotations[current.name] = current.transform.rotation;
 }
 
 	// save position
@@ -22,11 +23,11 @@ for (var current in resetObjects){
 // reset all positions
 function Update () {
 	if(Input.GetKeyDown("mouse 1")){
-		for (var key in map) {
-   		 Debug.Log(key.key + " " + key.Value);
-   		 var toReset = GameObject.Find(key.key);
-   		 toReset.rigidbody.rotation = Quaternion.identity;
-   		 toReset.transform.position = key.Value;
+	    Debug.Log("Resetting");
+		for (var current in resetObjects) {
+   		 var toReset = GameObject.Find(current.name);
+   		 toReset.transform.rotation = rotations[current.name];
+   		 toReset.transform.position = positions[current.name];
    		 toReset.rigidbody.useGravity = false;
 		}
 	}

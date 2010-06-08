@@ -3,6 +3,8 @@ function OnTriggerEnter (collider: Collider) {
 	var fallDownR = GameObject.Find("Together8");
 	var fallDownE = GameObject.Find("Together4");
 	
+	Debug.Log("Together Falldown");
+	
 	fallDownT.rigidbody.useGravity = true;
 	yield WaitForSeconds(1);	
 	fallDownR.rigidbody.useGravity = true;
