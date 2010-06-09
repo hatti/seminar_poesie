@@ -1,12 +1,9 @@
-
-var rotateTogether1: boolean = false;
+var times = 360;
 
 function Update () {
-
-	if (rotateTogether1 == true){
-		Debug.Log("In Update true Rotate.js");
-		transform.Rotate(0,50*Time.deltaTime,0);	
-	}
-	
-	
+transform.Rotate(Vector3.right);
+times--;
+if(times == 0){
+Destroy(this);
+}
 }

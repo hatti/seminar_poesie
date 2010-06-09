@@ -1,0 +1,37 @@
+Programmiersprachen
+   JavaScript, C#, Boo
+
+Interface
+   Assets View
+   Editor von Unity (auch andere möglich)
+
+Editor
+
+wichtigste Methoden
+    Update (bei jedem Frame aufgerufen, hauptsächliche Spiellogik)
+    Fixed Update(Bei jedem Physics Step aufgerufen, Physik Logik)
+
+Debug - Demo (Shoot herzeigen)
+
+Initialisierung - Demo (Reset script)
+
+Variables - Demo mit Interface (times bei letter E auf 0 setzen)
+
+Transform & Rotate (Vector, Time.deltaTime erwähnen)- Demo
+   hinzufügen und entfernen von script (GetComponent und AddComponent herzeigen)
+     Destroy auf selbst
+
+   Script holen (GetComponent) und variable auf true setzen auch möglich, braucht aber performance
+
+
+Instantiate (Letter-T herzeigen)
+      Prefab koordinaten beachten. Sind alle relativ intern (macht ja sinn)
+
+Coroutines with yield (Letter G herzeigen)
+   completely false in documentation
+   hin und zurück
+
+onTrigger (bei Spheres herzeigen)
+   gibt viele on... Methoden
+
+Unity3D abstürzen lassen

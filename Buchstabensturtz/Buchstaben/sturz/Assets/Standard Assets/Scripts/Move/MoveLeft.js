@@ -1,10 +1,10 @@
-var times = 0;
+var times = 100;
+var direction = new Vector3(5 * Time.deltaTime,0, 0);
 
 function Update () {
-   transform.Translate(5 * Time.deltaTime, 0, 0);
-   times++;
-   Debug.Log(times);
-   if(times > 100){
+   transform.Translate(direction);
+   times--;
+   if(times == 0){
      Destroy(this);
    }
 }
